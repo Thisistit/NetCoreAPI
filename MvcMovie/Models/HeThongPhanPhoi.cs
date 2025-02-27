@@ -1,12 +1,16 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace DemoMVC.Models.Entities
+namespace MvcMovie.Models
 {
     public class HeThongPhanPhoi
     {
-        [Key]
-        public String MaHTPP { get; set;}
-        public String TenHTPP { get;set;}
-       
+        public string MaHTPP  { get; set; }
+        public string TenHTPP  { get; set; }
+        
+
+        public HeThongPhanPhoi()
+        {
+            MaHTPP  = string.Empty;
+            TenHTPP  = string.Empty;
+            
+        }
     }
 }

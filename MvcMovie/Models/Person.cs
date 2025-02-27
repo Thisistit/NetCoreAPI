@@ -1,12 +1,16 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace DemoMVC.Models.Entities
+namespace MvcMovie.Models
 {
     public class Person
     {
-        [Key]
-        public String PersonID { get; set;}
-        public String HoTen { get;set;}
-        public String QueQuan { get; set;}
+        public string PersonId { get; set; }
+        public string FullName { get; set; }
+        public string Address { get; set; }
+
+        public Person()
+        {
+            PersonId = string.Empty;
+            FullName = string.Empty;
+            Address = string.Empty;
+        }
     }
 }

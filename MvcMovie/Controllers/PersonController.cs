@@ -1,19 +1,23 @@
-using DemoMVC.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
+using MvcMovie.Models;
+using System.Text.Encodings.Web;
 namespace MvcMovie.Controllers
 {
     public class PersonController : Controller
-    {
+    { 
+        // GET: /Person/
         public IActionResult Index()
         {
-            return View()
-        }
+            return View();
+        } 
+        // GET: /Person/Welcome/ 
+
         [HttpPost]
         public IActionResult Index(Person ps)
         {
-            string strOutput ="Xin chào" + ps.PersonID + "-" +ps.FullName + "-" + ps.Address;
-            ViewBag.infoPerson = strOutput;
+            string str0utput = "Xin Chào: " + ps.PersonId + "-" + ps.FullName + "-" + ps.Address;
+            ViewBag.infoPerson = str0utput;
             return View();
-        } 
+        }
     }
 }
